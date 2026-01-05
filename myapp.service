@@ -1,0 +1,16 @@
+[Unit]
+Description=MyApp Background Service
+After=network.target
+
+[Service]
+Type=simple
+User=appuser
+WorkingDirectory=/opt/myapp
+ExecStart=/opt/myapp/app.py
+Restart=always
+RestartSec=3
+StandardOutput=append:/var/log/myapp/app.log
+StandardError=append:/var/log/myapp/app.log
+
+[Install]
+WantedBy=multi-user.target
