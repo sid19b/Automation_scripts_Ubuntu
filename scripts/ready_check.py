@@ -1,17 +1,17 @@
 import requests
 import sys
 
-def health_check():
-    url = "http://localhost:8081/health"
+def ready_check():
+    url = "http://localhost:8081/ready"
 
     try:
         response = requests.get(url,timeout=(5,10))
 
         if response.status_code==200:
-            print("status:ok")
+            print("status:ready")
             sys.exit(0)
         else:
-            print("status:not ok")
+            print("status:not ready")
             sys.exit(1)
     except requests.exceptions.ConnectTimeout:
         print("ERROR: Connection timed out.")
@@ -22,4 +22,4 @@ def health_check():
 
 
 if __name__=="__main__":
-    health_check()
+    ready_check()
