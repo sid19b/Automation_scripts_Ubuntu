@@ -1,0 +1,8 @@
+| Directive    | Meaning (plain English)       |
+| ------------ | ----------------------------- |
+| `daily`      | rotate every day              |
+| `rotate 7`   | keep 7 old logs               |
+| `compress`   | gzip old logs                 |
+| `missingok`  | don’t fail if log missing     |
+| `notifempty` | don’t rotate empty logs       |
+| `create`     | create new log after rotation |

@@ -1,0 +1,8 @@
+/var/log/myapp/app.log{
+    daily
+    rotate 7
+    compress
+    create 0600 appuser appuser 
+    missingok
+    notifempty
+}
