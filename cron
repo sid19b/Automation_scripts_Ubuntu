@@ -1,0 +1,2 @@
+0 * * * * root (date; /opt/myapp/scripts/health_check.sh >> /var/log/myapp/cron.log) 2>&1
+0 * * * * root (date; /opt/myapp/scripts/ready_check.sh >> /var/log/myapp/cron.log) 2>&1
